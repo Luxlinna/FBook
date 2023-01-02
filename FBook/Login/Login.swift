@@ -19,13 +19,9 @@ struct Login : View {
     @State var error = ""
     
     var body: some View{
-        
         ZStack {
-            
             ZStack(alignment: .topTrailing) {
-                
                 GeometryReader{_ in
-                    
                     VStack{
                         
                         Image("book")
