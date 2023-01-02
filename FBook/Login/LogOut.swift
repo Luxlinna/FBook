@@ -1,30 +1,24 @@
 //
-//  GalleryView.swift
+//  Signout.swift
 //  FBook
 //
-//  Created by Linna Lux on 2022-11-21.
+//  Created by Linna Lux on 2023-01-02.
 //
 
 import SwiftUI
 import Firebase
 
-struct GalleryView: View {
+struct Logout: View {
     var body: some View {
         ZStack {
-            HStack {
-                Image("image2")
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                Text("Hello World").foregroundColor(.white).font(.system(size: 20)).bold()
-            }
-            
             Button(action: {
-                
+
                 try! Auth.auth().signOut()
                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                
+
             }) {
-                
+
                 Text("Log out")
                     .foregroundColor(.white)
                     .padding(.vertical)
@@ -33,14 +27,8 @@ struct GalleryView: View {
             .background(Color("Color"))
             .cornerRadius(25)
             .padding(.top, 100)
-            
-        }
-               
-    }
-}
 
-struct GalleryView_Previews: PreviewProvider {
-    static var previews: some View {
-        GalleryView()
+        }
+
     }
 }

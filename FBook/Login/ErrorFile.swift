@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Foundation
-//import Firebase
+import Firebase
 
 struct ErrorView : View {
     

@@ -25,7 +25,7 @@ struct FBookApp: App {
 
     var body: some Scene {
         WindowGroup {
-                ContentView()
+            Home()
         }
     }
 }
